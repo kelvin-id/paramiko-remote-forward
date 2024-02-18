@@ -27,12 +27,13 @@ server:
 build:
 	make -j build-forward build-server
 
+# --static-libpython=yes for macos and ubuntu
 # New targets for compiling with Nuitka
 build-forward:
-	${PYTHON} -m nuitka --output-dir=build --standalone --onefile forward.py
+	${PYTHON} -m nuitka --output-dir=build --standalone --onefile forward.py ${NUITKA_ARGS}
 
 build-server:
-	${PYTHON} -m nuitka --output-dir=build --standalone --onefile server.py
+	${PYTHON} -m nuitka --output-dir=build --standalone --onefile server.py ${NUITKA_ARGS}
 
 # Optional: clean up the build directories created by Nuitka
 clean:

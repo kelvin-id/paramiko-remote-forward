@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Executable Forward
         shell: bash
-        run: make build-forward
+        run: make build-forward NUITKA_ARGS="--assume-yes-for-downloads"
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
