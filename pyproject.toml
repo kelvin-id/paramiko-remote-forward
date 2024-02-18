@@ -7,6 +7,8 @@ authors = ["kwuite <contact@kelvin.id>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 paramiko = "^3.4.0"
+python-dotenv = "^1.0.1"
+Nuitka = "^2.0.3"
 
 [tool.poetry.dev-dependencies]
 

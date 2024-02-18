@@ -43,6 +43,29 @@ test = ["pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-xdist", "p
 test-randomorder = ["pytest-randomly"]
 
 [[package]]
+name = "nuitka"
+version = "2.0.3"
+description = "Python compiler with full language support and CPython compatibility"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+ordered-set = ">=4.1.0"
+zstandard = ">=0.15"
+
+[[package]]
+name = "ordered-set"
+version = "4.1.0"
+description = "An OrderedSet is a custom MutableSet that remembers its order, so that every"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+dev = ["pytest", "black", "mypy"]
+
+[[package]]
 name = "paramiko"
 version = "3.4.0"
 description = "SSH2 protocol library"
@@ -83,15 +106,44 @@ cffi = ">=1.4.1"
 docs = ["sphinx (>=1.6.5)", "sphinx-rtd-theme"]
 tests = ["pytest (>=3.2.1,!=3.3.0)", "hypothesis (>=3.27.0)"]
 
+[[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
+name = "zstandard"
+version = "0.22.0"
+description = "Zstandard bindings for Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+cffi = {version = ">=1.11", markers = "platform_python_implementation == \"PyPy\""}
+
+[package.extras]
+cffi = ["cffi (>=1.11)"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "670dc0062f6a8955e41f7856faf897dbc099a7cec8077981a631b47afbf2608e"
+content-hash = "655092c333320877a007b563e0cc4e33f6ff31a7f667a68f9d6d626c10a4f8b5"
 
 [metadata.files]
 bcrypt = []
 cffi = []
 cryptography = []
+nuitka = []
+ordered-set = []
 paramiko = []
 pycparser = []
 pynacl = []
+python-dotenv = []
+zstandard = []

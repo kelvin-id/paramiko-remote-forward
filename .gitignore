@@ -1,2 +1,4 @@
 ssh.log
 .env
+build/
+forward.*
